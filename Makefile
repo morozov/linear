@@ -19,9 +19,9 @@ boot.bin: src/boot.asm src/loader.asm
 breath.tap: breath.000
 	0totap -o breath.tap breath.000
 
-breath.000: scr/breath.scr
+breath.000: scr/breath.bin
 	rm -f breath.000
-	binto0 scr/breath.scr 4
+	binto0 scr/breath.bin 4
 	mv scr/breath.000 $@
 
 clean:
