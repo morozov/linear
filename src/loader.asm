@@ -1,6 +1,8 @@
 LD_LOOP  equ $05A9 ; https://skoolkid.github.io/rom/asm/0556.html#05A9
 LD_BREAK equ $056B ; https://skoolkid.github.io/rom/asm/0556.html#056B
 
+    xor     a
+    ld      c, a
     ld      ix, $4000
     push    ix
     ld      de, $0020
