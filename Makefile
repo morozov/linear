@@ -1,7 +1,7 @@
 tap/linear.tap: boot.bas breath.tap
 # Create a temporary file first in order to make sure the target file
 # gets created only after the entire job has succeeded
-	$(eval TMPFILE=$(shell tempfile).tap)
+	$(eval TMPFILE=$(shell mktemp /tmp/linear.XXXXXX).tap)
 
 	bas2tap -sLinear -a10 boot.bas $(TMPFILE)
 	cat breath.tap >> $(TMPFILE)
